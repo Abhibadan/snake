@@ -1,0 +1,61 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 250px;
+    position: absolutes;
+}
+#board{
+    background-color: rgb(234, 205, 62);
+    height: 510px;
+    width: 510px;
+    display: grid;
+    grid-template-columns: repeat(50,1fr);
+    grid-template-rows: repeat(50,1fr);
+    position: absolute;
+    padding: 10px;
+    z-index: 10;
+}
+.snake{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(101, 255, 34);
+    display: grid;
+    position: absolute;
+    border: 1px solid rgb(27, 120, 13);
+    z-index: 10;
+}
+@keyframes blink {
+    from {background-color: rgb(255, 255, 0);}
+    to {background-color: rgb(255, 0, 0);}
+  }
+#frog{
+    height: 10px;
+    width: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(120, 13, 13);
+    display: grid;
+    position: absolute;
+    z-index: 10;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.warning{
+    position: relative;
+    top:200px;
+    left: 25px;
+    font-size: 70px;
+    color: red;
+    font-weight: 900;
+    animation-name:  game_end;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes game_end {
+    from {color: rgb(255, 255, 0);}
+    to {color: rgb(255, 0, 0);}
+}
+#score{
+    top:540px;
+    position: relative;
+}
