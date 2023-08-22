@@ -3,6 +3,8 @@ body{
     justify-content: center;
     padding: 8%;
     position: absolutes;
+    height: 100%;
+    padding-bottom: 40px;
 }
 #board{
     background-color: rgb(234, 205, 62);
