@@ -19,13 +19,15 @@ function eat(){
                     frogFlag=1;
                     document.getElementById("board").style.backgroundColor="rgb(22, 1, 1)";
                     document.getElementById("board").style.border="10px solid  rgb(255,0,0)";
-                    document.getElementById("board").insertAdjacentHTML("beforeend", "<h class='warning'>GAME&nbsp;OVER</h>");
-                    document.getElementById("board").insertAdjacentText("beforeend", document.getElementById("score").innerText);
+                    document.getElementById("board").insertAdjacentHTML("beforeend", `<h class='warning'>GAME&nbsp;OVER&nbsp;AT&nbsp;${score}</h> `);
+                    document.getElementById("board").style.display="flex";
+                    document.getElementById("board").style.justifyContent="center";
+                    // document.getElementById("board").insertAdjacentText("beforeend", );
                     document.getElementById("score").innerText='';
-                    setTimeout(()=>{
+                    // setTimeout(()=>{
                         
-                        location.reload();
-                    },5000)
+                    //     location.reload();
+                    // },5000)
                 }
             }
             return false;
