@@ -1,9 +1,8 @@
     var snake=document.getElementsByClassName("snake");
-    var snake_body=[{x:10,y:10},{x:9,y:10},{x:8,y:10}];
+    var snake_body=[{x:30,y:30},{x:29,y:30},{x:28,y:30}];
     for (let i = 0; i < snake.length; i++) {
         snake[i].style.gridColumnStart=snake_body[i].x;
         snake[i].style.gridRowStart=snake_body[i].y;
-
     }
     let score=0;
     let temp;

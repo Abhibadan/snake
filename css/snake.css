@@ -1,28 +1,23 @@
 body{
     display: flex;
     justify-content: center;
-    padding: 8%;
-    position: absolutes;
-    height: 100%;
-    padding-bottom: 40px;
+    margin: 5% 0;
 }
 #board{
     background-color: rgb(234, 205, 62);
-    height: 510px;
-    width: 510px;
+    height: 80%;
+    aspect-ratio: 1/1;
     display: grid;
     grid-template-columns: repeat(50,1fr);
     grid-template-rows: repeat(50,1fr);
     position: absolute;
-    padding: 10px;
-    z-index: 10;
+    border: 10px solid rgb(234, 205, 62);
 }
-.snake{
-    height: 10px;
-    width: 10px;
+#board .snake{
+    box-sizing: border-box;
     background-color: rgb(101, 255, 34);
     display: grid;
-    position: absolute;
+    position: relative;
     border: 1px solid rgb(27, 120, 13);
     z-index: 10;
 }
@@ -31,12 +26,10 @@ body{
     to {background-color: rgb(255, 0, 0);}
   }
 #frog{
-    height: 10px;
-    width: 10px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(120, 13, 13);
     display: grid;
-    position: absolute;
+    position: relative;
     z-index: 10;
     animation-name: blink;
     animation-duration: 1s;
@@ -44,7 +37,6 @@ body{
 }
 .warning{
     position: relative;
-    top:200px;
     left: 25px;
     font-size: 70px;
     color: red;
@@ -57,7 +49,10 @@ body{
     from {color: rgb(255, 255, 0);}
     to {color: rgb(255, 0, 0);}
 }
-#score{
-    top:540px;
-    position: relative;
+#score {
+    position: absolute;
+    bottom: 1%; /* Adjust this value to position the score element just below the board */
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
