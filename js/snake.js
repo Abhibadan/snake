@@ -193,7 +193,7 @@
                 }
             }
         }
-        else if((desX-currentX>-100) && (desY-currentY<50)){
+        else if((desX-currentX<-100) && (desY-currentY<50)){
             if(setH==0){
                 rightmove=setInterval(() => {
                     l = snake_body[0].x;
@@ -220,7 +220,7 @@
                 }
             }
         }
-        else if((desX-currentX<20) && (desY-currentY<-100)){
+        else if((desX-currentX<50) && (desY-currentY<-100)){
             if(setV==0){
                 downmove=setInterval(() => {
                     l = snake_body[0].x;
