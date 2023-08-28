@@ -11,8 +11,5 @@ const render_frog= setInterval(()=>{
         frog.style.gridColumnStart=frogX;
         frog.style.gridRowStart=frogY;
         frogFlag=1;
-    }else{
-        console.log(frogFlag);
     }
-    
 },5000);

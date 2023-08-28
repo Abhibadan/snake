@@ -1,6 +1,6 @@
 function eat(){
         if(frogFlag==1 && frogX==snake_body[0].x && frogY==snake_body[0].y){
-            console.log("eat");
+            // console.log("eat");
             document.getElementById("board").removeChild(document.getElementById("frog"));
             frogFlag=0;
             let generate_snake=document.createElement("div");
@@ -24,10 +24,10 @@ function eat(){
                     document.getElementById("board").style.justifyContent="center";
                     // document.getElementById("board").insertAdjacentText("beforeend", );
                     document.getElementById("score").innerText='';
-                    // setTimeout(()=>{
+                    setTimeout(()=>{
                         
-                    //     location.reload();
-                    // },5000)
+                        location.reload();
+                    },5000)
                 }
             }
             return false;
